@@ -1,0 +1,116 @@
+.mg-garde {
+  padding: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.mg-back-button {
+  padding: 10px 20px;
+  background: #6b21a8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.mg-back-button:hover {
+  background: #581c87;
+  transform: translateX(-4px);
+}
+
+.mg-garde-header {
+  margin-bottom: 30px;
+}
+
+.mg-garde-header h1 {
+  font-size: 28px;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.mg-filter-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.mg-filter-tabs button {
+  padding: 10px 20px;
+  background: white;
+  border: 2px solid var(--color-border, #e2e8f0);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mg-filter-tabs button.active {
+  background: #6b21a8;
+  color: white;
+  border-color: #6b21a8;
+}
+
+.mg-gardes-table-container {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.mg-gardes-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.mg-gardes-table th {
+  background: #f1f5f9;
+  padding: 14px;
+  text-align: left;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.mg-gardes-table td {
+  padding: 14px;
+  border-bottom: 1px solid var(--color-border, #e2e8f0);
+}
+
+.mg-status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.mg-status-badge.active {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.mg-status-badge.inactive {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.mg-empty-state {
+  text-align: center;
+  padding: 80px 20px;
+  background: white;
+  border-radius: 12px;
+}
+
+.mg-empty-state span {
+  font-size: 64px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.mg-loading {
+  text-align: center;
+  padding: 60px;
+  font-size: 18px;
+  color: var(--color-muted, #64748b);
+}

@@ -1,0 +1,465 @@
+/* DoctorGard.css - Wide Professional Layout | Same Colors */
+
+* { box-sizing: border-box; }
+
+/* ══════════════════════════════════════
+   ROOT CONTAINER
+══════════════════════════════════════ */
+.dg-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--color-surface, #f8fafc);
+  font-family: 'Segoe UI', sans-serif;
+  width: 100%;
+  padding-bottom: 80px;
+}
+
+/* ══════════════════════════════════════
+   TOAST
+══════════════════════════════════════ */
+.dg-toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 1000;
+  animation: dg-slideDown 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.dg-toastSuccess { background: #dcfce7; color: #16a34a; border: 1px solid #86efac; }
+.dg-toastError   { background: #fee2e2; color: #dc2626; border: 1px solid #fca5a5; }
+
+@keyframes dg-slideDown {
+  from { opacity: 0; transform: translate(-50%, -16px); }
+  to   { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* ══════════════════════════════════════
+   TOP HEADER
+══════════════════════════════════════ */
+.dg-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 48px;
+  height: 68px;
+  background: #fff;
+  border-bottom: 1px solid var(--color-border, #e2e8f0);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  width: 100%;
+}
+
+.dg-headerTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-primary, #1e3a8a);
+}
+
+.dg-backBtn {
+  width: 40px;
+  height: 40px;
+  background: var(--color-surface, #f8fafc);
+  border: 1.5px solid var(--color-border, #e2e8f0);
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #475569;
+}
+
+.dg-backBtn:hover {
+  background: #eff6ff;
+  border-color: var(--color-accent, #2563eb);
+  color: var(--color-accent, #2563eb);
+}
+
+.dg-addBtn {
+  width: 100%;
+  height: 40px;
+  background: var(--color-accent, #2563eb);
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dg-addBtn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(37,99,235,0.35);
+}
+
+/* ══════════════════════════════════════
+   HERO BAND
+══════════════════════════════════════ */
+.dg-heroBand {
+  background: linear-gradient(135deg, var(--color-primary, #1e3a8a) 0%, var(--color-accent, #2563eb) 100%);
+  padding: 48px;
+  width: 100%;
+}
+
+.dg-heroBand h1 {
+  color: white;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+}
+
+.dg-heroBand p {
+  color: rgba(255,255,255,0.72);
+  font-size: 15px;
+}
+
+/* ══════════════════════════════════════
+   MAIN CONTENT
+══════════════════════════════════════ */
+.dg-mainContent {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 36px 48px;
+}
+
+/* ══════════════════════════════════════
+   STATS ROW
+══════════════════════════════════════ */
+.dg-statsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 36px;
+}
+
+.dg-statCard {
+  background: #fff;
+  border: 1.5px solid var(--color-border, #e2e8f0);
+  border-radius: 18px;
+  padding: 28px 24px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.dg-statCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+.dg-statVal {
+  font-size: 42px;
+  font-weight: 800;
+  display: block;
+  margin-bottom: 6px;
+  line-height: 1;
+}
+
+.dg-statLabel {
+  font-size: 13px;
+  color: var(--color-muted, #64748b);
+  font-weight: 600;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ══════════════════════════════════════
+   GARD FORM
+══════════════════════════════════════ */
+.dg-gardForm {
+  background: #fff;
+  border: 1.5px solid var(--color-border, #e2e8f0);
+  border-radius: 18px;
+  padding: 28px;
+  margin-bottom: 32px;
+}
+
+.dg-formTitle {
+  color: var(--color-primary, #1e3a8a);
+  margin-bottom: 22px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.dg-formGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.dg-formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.dg-formGroup label {
+  font-size: 11px;
+  color: var(--color-muted, #64748b);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dg-formGroup input,
+.dg-formGroup select {
+  padding: 12px 15px;
+  border: 1.5px solid var(--color-border, #e2e8f0);
+  border-radius: 10px;
+  background: var(--color-surface, #f8fafc);
+  font-size: 14px;
+  outline: none;
+  color: var(--color-text, #0f172a);
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.dg-formGroup input:focus,
+.dg-formGroup select:focus {
+  border-color: var(--color-accent, #2563eb);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.08);
+}
+
+.dg-saveBtn {
+  padding: 12px 32px;
+  background: var(--color-accent, #2563eb);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dg-saveBtn:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(37,99,235,0.3);
+}
+
+.dg-saveBtn:disabled { background: #94a3b8; cursor: not-allowed; }
+
+/* ══════════════════════════════════════
+   TABS
+══════════════════════════════════════ */
+.dg-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  background: #fff;
+  padding: 5px;
+  border-radius: 12px;
+  border: 1.5px solid var(--color-border, #e2e8f0);
+  width: fit-content;
+}
+
+.dg-tabBtn {
+  padding: 10px 28px;
+  background: transparent;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-muted, #64748b);
+  transition: all 0.2s;
+}
+
+.dg-tabBtn:hover { color: var(--color-accent, #2563eb); }
+.dg-tabActive    { background: var(--color-accent, #2563eb) !important; color: white !important; }
+
+/* ══════════════════════════════════════
+   CARDS GRID
+══════════════════════════════════════ */
+.dg-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.dg-gardCard {
+  background: #fff;
+  border: 1.5px solid var(--color-border, #e2e8f0);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.2s;
+}
+
+.dg-gardCard:hover {
+  border-color: var(--color-accent, #2563eb);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(37,99,235,0.1);
+}
+
+.dg-cardLeft  { flex-shrink: 0; }
+.dg-shiftBadge { font-size: 38px; }
+
+.dg-cardMiddle { flex: 1; min-width: 0; }
+
+.dg-cardName {
+  font-weight: 700;
+  color: var(--color-primary, #1e3a8a);
+  margin-bottom: 5px;
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dg-cardDate { font-size: 12px; color: var(--color-muted, #64748b); }
+.dg-cardLoc  { font-size: 11px; color: #94a3b8; margin-top: 3px; }
+
+.dg-cardRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.dg-shiftLabel {
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.dg-statusActive   { background: #dcfce7; color: #16a34a; }
+.dg-statusInactive { background: #fee2e2; color: #dc2626; }
+
+.dg-deleteBtn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px 7px;
+  transition: all 0.2s;
+  border-radius: 8px;
+}
+
+.dg-deleteBtn:hover {
+  background: #fee2e2;
+  transform: scale(1.1);
+}
+
+/* ══════════════════════════════════════
+   LOADING & EMPTY
+══════════════════════════════════════ */
+.dg-loadingWrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+}
+
+.dg-skeleton {
+  height: 90px;
+  background: linear-gradient(90deg, #f1f5f9 25%, var(--color-border, #e2e8f0) 50%, #f1f5f9 75%);
+  background-size: 200% 100%;
+  border-radius: 16px;
+  animation: dg-shimmer 1.4s infinite;
+}
+
+@keyframes dg-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.dg-empty {
+  text-align: center;
+  padding: 80px 20px;
+  color: #94a3b8;
+  grid-column: 1 / -1;
+}
+
+.dg-empty span { font-size: 56px; display: block; margin-bottom: 12px; }
+.dg-empty p    { font-size: 15px; }
+
+/* ══════════════════════════════════════
+   BOTTOM NAV
+══════════════════════════════════════ */
+.dg-bottomNav {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 24px;
+  background: white;
+  border-top: 1px solid var(--color-border, #e2e8f0);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+}
+
+.dg-navBtn {
+  background: none;
+  border: none;
+  padding: 8px 28px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: all 0.2s;
+  color: #94a3b8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.dg-navBtn span:first-child { font-size: 22px; }
+.dg-navBtn:hover { background: #eff6ff; color: var(--color-accent, #2563eb); }
+.dg-navActive    { background: #eff6ff !important; color: var(--color-accent, #2563eb) !important; }
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media (max-width: 900px) {
+  .dg-header      { padding: 0 24px; }
+  .dg-heroBand    { padding: 36px 24px; }
+  .dg-mainContent { padding: 24px 24px; }
+  .dg-statsRow    { gap: 14px; }
+  .dg-statVal     { font-size: 32px; }
+  .dg-list        { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+  .dg-loadingWrap { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .dg-header      { padding: 0 16px; height: 60px; }
+  .dg-heroBand    { padding: 28px 16px; }
+  .dg-heroBand h1 { font-size: 22px; }
+  .dg-mainContent { padding: 20px 16px; }
+  .dg-statsRow    { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .dg-statVal     { font-size: 26px; }
+  .dg-statCard    { padding: 16px 10px; }
+  .dg-formGrid    { grid-template-columns: 1fr; }
+  .dg-list        { grid-template-columns: 1fr; }
+  .dg-loadingWrap { grid-template-columns: 1fr; }
+  .dg-saveBtn     { width: 100%; }
+  .dg-tabs        { width: 100%; }
+  .dg-tabBtn      { flex: 1; text-align: center; padding: 10px 12px; }
+  .dg-navBtn      { padding: 8px 12px; }
+}

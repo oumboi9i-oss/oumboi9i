@@ -1,0 +1,17 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:5000",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "googleapis": "^171.4.0",
+    "nodemailer": "^8.0.5",
+    "react-router-dom": "^7.13.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

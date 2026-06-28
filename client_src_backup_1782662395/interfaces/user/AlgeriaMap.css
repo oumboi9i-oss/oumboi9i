@@ -1,0 +1,32 @@
+.algeria-map-wrap {
+  flex: 1;
+  position: relative;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+}
+.algeria-map-container {
+  flex: 1;
+  min-height: 450px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+.algeria-map-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #64748b;
+  z-index: 1;
+}
+.wilaya-tooltip {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+}

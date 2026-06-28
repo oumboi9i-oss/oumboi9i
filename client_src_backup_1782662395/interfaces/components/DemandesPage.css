@@ -1,0 +1,266 @@
+.dem-demandes-page {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dem-back-btn {
+  padding: 10px 20px;
+  background: #6b21a8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.3s;
+}
+
+.dem-back-btn:hover {
+  background: #581c87;
+  transform: translateX(-3px);
+}
+
+.dem-header {
+  margin-bottom: 30px;
+}
+
+.dem-header h1 {
+  font-size: 28px;
+  color: var(--color-text, #0f172a);
+  margin-bottom: 8px;
+}
+
+.dem-header p {
+  color: var(--color-muted, #64748b);
+  margin: 0;
+}
+
+.dem-filter-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.dem-filter-tabs button {
+  padding: 10px 18px;
+  background: white;
+  border: 2px solid var(--color-border, #e2e8f0);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 13px;
+}
+
+.dem-filter-tabs button:hover {
+  border-color: #6b21a8;
+  color: #6b21a8;
+}
+
+.dem-filter-tabs button.dem-active {
+  background: #6b21a8;
+  color: white;
+  border-color: #6b21a8;
+}
+
+.dem-demandes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dem-demande-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s;
+}
+
+.dem-demande-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
+}
+
+.dem-demande-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.dem-demande-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--color-text, #0f172a);
+}
+
+.dem-status-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.dem-status-badge.dem-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.dem-status-badge.dem-accepted {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.dem-status-badge.dem-rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.dem-status-badge.dem-completed {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.dem-demande-info p {
+  margin: 8px 0;
+  color: #475569;
+  font-size: 14px;
+}
+
+.dem-demande-info strong {
+  color: var(--color-text, #0f172a);
+}
+
+.dem-demande-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.dem-btn-accept,
+.dem-btn-reject,
+.dem-btn-chat,
+.dem-btn-messages {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 14px;
+}
+
+.dem-btn-accept {
+  background: #10b981;
+  color: white;
+  flex: 1;
+  min-width: 120px;
+}
+
+.dem-btn-accept:hover {
+  background: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.dem-btn-reject {
+  background: #ef4444;
+  color: white;
+  flex: 1;
+  min-width: 120px;
+}
+
+.dem-btn-reject:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.dem-btn-chat {
+  background: linear-gradient(135deg, #6b21a8 0%, #8b5cf6 100%);
+  color: white;
+  flex: 1;
+  min-width: 200px;
+}
+
+.dem-btn-chat:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(107, 33, 168, 0.3);
+}
+
+.dem-btn-messages {
+  background: var(--color-accent, #2563eb);
+  color: white;
+  flex: 1;
+  min-width: 180px;
+}
+
+.dem-btn-messages:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.dem-waiting-director,
+.dem-approved,
+.dem-rejected-director {
+  flex: 1;
+  padding: 12px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.dem-waiting-director {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.dem-approved {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.dem-rejected-director {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.dem-loading, .dem-empty {
+  text-align: center;
+  padding: 60px;
+  font-size: 18px;
+  color: var(--color-muted, #64748b);
+}
+
+.dem-empty span {
+  font-size: 64px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 600px) {
+  .dem-demandes-page {
+    padding: 16px;
+  }
+
+  .dem-demande-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .dem-demande-actions {
+    flex-direction: column;
+  }
+
+  .dem-btn-accept, .dem-btn-reject, .dem-btn-chat, .dem-btn-messages {
+    width: 100%;
+  }
+}

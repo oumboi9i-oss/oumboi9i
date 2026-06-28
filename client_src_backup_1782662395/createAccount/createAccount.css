@@ -1,0 +1,164 @@
+/* createAccount.css - Matching ManageTransactions Style (Navy + Red) */
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 20px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo-text {
+    font-size: 28px;
+    color: #1e3a8a; /* Navy Blue */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.logo-text span {
+    color: #ef4444; /* Red Accent */
+}
+
+.tagline {
+    color: #64748b;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+/* Status Messages */
+.status-message {
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    animation: slideIn 0.3s ease;
+}
+
+.status-message.success {
+    background: #dcfce7;
+    color: #16a34a;
+    border: 1px solid #86efac;
+}
+
+.status-message.error {
+    background: #fee2e2;
+    color: #dc2626;
+    border: 1px solid #fca5a5;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Form Grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 25px;
+    font-size: 14px;
+    transition: all 0.3s;
+    background: #f8fafc;
+    outline: none;
+    color: #334155;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #1e3a8a;
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+    background: white;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.main-btn {
+    width: 100%;
+    padding: 12px 25px;
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 15px;
+}
+
+.main-btn:hover:not(:disabled) {
+    background: #1e40af;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+}
+
+.main-btn:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Warning Box */
+.warning-box {
+    background: #fef3c7;
+    border: 1px solid #fcd34d;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.warning-box p {
+    margin: 4px 0;
+    color: #92400e;
+    font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .login-card { padding: 20px; }
+    .logo-text { font-size: 24px; }
+    .form-group input,
+    .form-group select { padding: 10px 12px; font-size: 13px; }
+    .main-btn { width: 100%; }
+}

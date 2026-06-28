@@ -1,0 +1,488 @@
+[
+  {
+    "osmId": "static/oum-el-bouaghi-hospital-1",
+    "name": "مستشفى أم البواقي",
+    "type": "hospital",
+    "wilaya": "Oum El Bouaghi",
+    "lat": 35.8731,
+    "lng": 7.1128,
+    "address": "أم البواقي"
+  },
+  {
+    "osmId": "static/oum-el-bouaghi-hospital-2",
+    "name": "مستشفى عين مليلة",
+    "type": "hospital",
+    "wilaya": "Oum El Bouaghi",
+    "lat": 36.0320,
+    "lng": 6.5700,
+    "address": "عين مليلة، أم البواقي"
+  },
+  {
+    "osmId": "static/oum-el-bouaghi-hospital-3",
+    "name": "مستشفى عين البيضاء",
+    "type": "hospital",
+    "wilaya": "Oum El Bouaghi",
+    "lat": 35.7939,
+    "lng": 7.4056,
+    "address": "عين البيضاء، أم البواقي"
+  },
+  {
+    "osmId": "static/oum-el-bouaghi-pharmacy-1",
+    "name": "صيدلية الهلال",
+    "type": "pharmacy",
+    "wilaya": "Oum El Bouaghi",
+    "lat": 35.8750,
+    "lng": 7.1140,
+    "address": "شارع العقيد عميروش، أم البواقي"
+  },
+  {
+    "osmId": "static/oum-el-bouaghi-pharmacy-2",
+    "name": "صيدلية النور",
+    "type": "pharmacy",
+    "wilaya": "Oum El Bouaghi",
+    "lat": 35.8700,
+    "lng": 7.1090,
+    "address": "أم البواقي"
+  },
+  {
+    "osmId": "static/oum-el-bouaghi-pharmacy-3",
+    "name": "صيدلية عين مليلة المركزية",
+    "type": "pharmacy",
+    "wilaya": "Oum El Bouaghi",
+    "lat": 36.0330,
+    "lng": 6.5720,
+    "address": "عين مليلة، أم البواقي"
+  },
+  {
+    "osmId": "static/oum-el-bouaghi-firestation-1",
+    "name": "ثكنة الحماية المدنية أم البواقي",
+    "type": "firestation",
+    "wilaya": "Oum El Bouaghi",
+    "lat": 35.8720,
+    "lng": 7.1100,
+    "address": "أم البواقي"
+  },
+  {
+    "osmId": "static/oum-el-bouaghi-firestation-2",
+    "name": "ثكنة الحماية المدنية عين مليلة",
+    "type": "firestation",
+    "wilaya": "Oum El Bouaghi",
+    "lat": 36.0310,
+    "lng": 6.5690,
+    "address": "عين مليلة، أم البواقي"
+  },
+  {
+    "osmId": "static/constantine-hospital-1",
+    "name": "مستشفى ابن باديس الجامعي",
+    "type": "hospital",
+    "wilaya": "Constantine",
+    "lat": 36.3600,
+    "lng": 6.6100,
+    "address": "شارع زيغود يوسف، قسنطينة"
+  },
+  {
+    "osmId": "static/constantine-hospital-2",
+    "name": "مستشفى الحكيم سعدان",
+    "type": "hospital",
+    "wilaya": "Constantine",
+    "lat": 36.3700,
+    "lng": 6.6200,
+    "address": "قسنطينة"
+  },
+  {
+    "osmId": "static/constantine-hospital-3",
+    "name": "مستشفى الأم والطفل",
+    "type": "hospital",
+    "wilaya": "Constantine",
+    "lat": 36.3650,
+    "lng": 6.6050,
+    "address": "قسنطينة"
+  },
+  {
+    "osmId": "static/constantine-pharmacy-1",
+    "name": "صيدلية المنصورة",
+    "type": "pharmacy",
+    "wilaya": "Constantine",
+    "lat": 36.3580,
+    "lng": 6.6080,
+    "address": "حي المنصورة، قسنطينة"
+  },
+  {
+    "osmId": "static/constantine-pharmacy-2",
+    "name": "صيدلية علي منجلي",
+    "type": "pharmacy",
+    "wilaya": "Constantine",
+    "lat": 36.3200,
+    "lng": 6.5800,
+    "address": "حي علي منجلي، قسنطينة"
+  },
+  {
+    "osmId": "static/constantine-firestation-1",
+    "name": "ثكنة الحماية المدنية قسنطينة",
+    "type": "firestation",
+    "wilaya": "Constantine",
+    "lat": 36.3620,
+    "lng": 6.6130,
+    "address": "قسنطينة"
+  },
+  {
+    "osmId": "static/constantine-firestation-2",
+    "name": "ثكنة الحماية المدنية علي منجلي",
+    "type": "firestation",
+    "wilaya": "Constantine",
+    "lat": 36.3180,
+    "lng": 6.5770,
+    "address": "حي علي منجلي، قسنطينة"
+  },
+  {
+    "osmId": "static/setif-hospital-1",
+    "name": "المستشفى الجامعي سطيف",
+    "type": "hospital",
+    "wilaya": "Setif",
+    "lat": 36.1870,
+    "lng": 5.4080,
+    "address": "سطيف"
+  },
+  {
+    "osmId": "static/setif-hospital-2",
+    "name": "مستشفى العيون سطيف",
+    "type": "hospital",
+    "wilaya": "Setif",
+    "lat": 36.1910,
+    "lng": 5.4120,
+    "address": "سطيف"
+  },
+  {
+    "osmId": "static/setif-pharmacy-1",
+    "name": "صيدلية عين أزال",
+    "type": "pharmacy",
+    "wilaya": "Setif",
+    "lat": 36.1830,
+    "lng": 5.4040,
+    "address": "سطيف"
+  },
+  {
+    "osmId": "static/setif-firestation-1",
+    "name": "ثكنة الحماية المدنية سطيف",
+    "type": "firestation",
+    "wilaya": "Setif",
+    "lat": 36.1850,
+    "lng": 5.4060,
+    "address": "سطيف"
+  },
+  {
+    "osmId": "static/batna-hospital-1",
+    "name": "المستشفى الجامعي باتنة",
+    "type": "hospital",
+    "wilaya": "Batna",
+    "lat": 35.5560,
+    "lng": 6.1740,
+    "address": "باتنة"
+  },
+  {
+    "osmId": "static/batna-hospital-2",
+    "name": "مستشفى سيدي معروف",
+    "type": "hospital",
+    "wilaya": "Batna",
+    "lat": 35.5620,
+    "lng": 6.1800,
+    "address": "باتنة"
+  },
+  {
+    "osmId": "static/batna-pharmacy-1",
+    "name": "صيدلية الشفاء باتنة",
+    "type": "pharmacy",
+    "wilaya": "Batna",
+    "lat": 35.5570,
+    "lng": 6.1750,
+    "address": "باتنة"
+  },
+  {
+    "osmId": "static/batna-firestation-1",
+    "name": "ثكنة الحماية المدنية باتنة",
+    "type": "firestation",
+    "wilaya": "Batna",
+    "lat": 35.5540,
+    "lng": 6.1720,
+    "address": "باتنة"
+  },
+  {
+    "osmId": "static/annaba-hospital-1",
+    "name": "مستشفى ابن سينا عنابة",
+    "type": "hospital",
+    "wilaya": "Annaba",
+    "lat": 36.8980,
+    "lng": 7.7640,
+    "address": "عنابة"
+  },
+  {
+    "osmId": "static/annaba-hospital-2",
+    "name": "مستشفى الإخوة مرسلي",
+    "type": "hospital",
+    "wilaya": "Annaba",
+    "lat": 36.9020,
+    "lng": 7.7680,
+    "address": "عنابة"
+  },
+  {
+    "osmId": "static/annaba-pharmacy-1",
+    "name": "صيدلية عنابة المركزية",
+    "type": "pharmacy",
+    "wilaya": "Annaba",
+    "lat": 36.9000,
+    "lng": 7.7660,
+    "address": "عنابة"
+  },
+  {
+    "osmId": "static/annaba-firestation-1",
+    "name": "ثكنة الحماية المدنية عنابة",
+    "type": "firestation",
+    "wilaya": "Annaba",
+    "lat": 36.8960,
+    "lng": 7.7620,
+    "address": "عنابة"
+  },
+  {
+    "osmId": "static/guelma-hospital-1",
+    "name": "مستشفى قالمة",
+    "type": "hospital",
+    "wilaya": "Guelma",
+    "lat": 36.4622,
+    "lng": 7.4328,
+    "address": "قالمة"
+  },
+  {
+    "osmId": "static/guelma-pharmacy-1",
+    "name": "صيدلية قالمة",
+    "type": "pharmacy",
+    "wilaya": "Guelma",
+    "lat": 36.4630,
+    "lng": 7.4340,
+    "address": "قالمة"
+  },
+  {
+    "osmId": "static/guelma-firestation-1",
+    "name": "ثكنة الحماية المدنية قالمة",
+    "type": "firestation",
+    "wilaya": "Guelma",
+    "lat": 36.4610,
+    "lng": 7.4310,
+    "address": "قالمة"
+  },
+  {
+    "osmId": "static/skikda-hospital-1",
+    "name": "مستشفى سكيكدة",
+    "type": "hospital",
+    "wilaya": "Skikda",
+    "lat": 36.8783,
+    "lng": 6.9058,
+    "address": "سكيكدة"
+  },
+  {
+    "osmId": "static/skikda-pharmacy-1",
+    "name": "صيدلية سكيكدة",
+    "type": "pharmacy",
+    "wilaya": "Skikda",
+    "lat": 36.8800,
+    "lng": 6.9070,
+    "address": "سكيكدة"
+  },
+  {
+    "osmId": "static/skikda-firestation-1",
+    "name": "ثكنة الحماية المدنية سكيكدة",
+    "type": "firestation",
+    "wilaya": "Skikda",
+    "lat": 36.8760,
+    "lng": 6.9040,
+    "address": "سكيكدة"
+  },
+  {
+    "osmId": "static/souk-ahras-hospital-1",
+    "name": "مستشفى سوق أهراس",
+    "type": "hospital",
+    "wilaya": "Souk Ahras",
+    "lat": 36.2864,
+    "lng": 7.9511,
+    "address": "سوق أهراس"
+  },
+  {
+    "osmId": "static/souk-ahras-pharmacy-1",
+    "name": "صيدلية سوق أهراس",
+    "type": "pharmacy",
+    "wilaya": "Souk Ahras",
+    "lat": 36.2870,
+    "lng": 7.9520,
+    "address": "سوق أهراس"
+  },
+  {
+    "osmId": "static/souk-ahras-firestation-1",
+    "name": "ثكنة الحماية المدنية سوق أهراس",
+    "type": "firestation",
+    "wilaya": "Souk Ahras",
+    "lat": 36.2850,
+    "lng": 7.9500,
+    "address": "سوق أهراس"
+  },
+  {
+    "osmId": "static/tebessa-hospital-1",
+    "name": "مستشفى تبسة",
+    "type": "hospital",
+    "wilaya": "Tebessa",
+    "lat": 35.4042,
+    "lng": 8.1244,
+    "address": "تبسة"
+  },
+  {
+    "osmId": "static/tebessa-pharmacy-1",
+    "name": "صيدلية تبسة",
+    "type": "pharmacy",
+    "wilaya": "Tebessa",
+    "lat": 35.4050,
+    "lng": 8.1260,
+    "address": "تبسة"
+  },
+  {
+    "osmId": "static/tebessa-firestation-1",
+    "name": "ثكنة الحماية المدنية تبسة",
+    "type": "firestation",
+    "wilaya": "Tebessa",
+    "lat": 35.4030,
+    "lng": 8.1230,
+    "address": "تبسة"
+  },
+  {
+    "osmId": "static/khenchela-hospital-1",
+    "name": "مستشفى خنشلة",
+    "type": "hospital",
+    "wilaya": "Khenchela",
+    "lat": 35.4350,
+    "lng": 7.1428,
+    "address": "خنشلة"
+  },
+  {
+    "osmId": "static/khenchela-pharmacy-1",
+    "name": "صيدلية خنشلة",
+    "type": "pharmacy",
+    "wilaya": "Khenchela",
+    "lat": 35.4360,
+    "lng": 7.1440,
+    "address": "خنشلة"
+  },
+  {
+    "osmId": "static/khenchela-firestation-1",
+    "name": "ثكنة الحماية المدنية خنشلة",
+    "type": "firestation",
+    "wilaya": "Khenchela",
+    "lat": 35.4340,
+    "lng": 7.1410,
+    "address": "خنشلة"
+  },
+  {
+    "osmId": "static/mila-hospital-1",
+    "name": "مستشفى ميلة",
+    "type": "hospital",
+    "wilaya": "Mila",
+    "lat": 36.4500,
+    "lng": 6.2667,
+    "address": "ميلة"
+  },
+  {
+    "osmId": "static/mila-pharmacy-1",
+    "name": "صيدلية ميلة",
+    "type": "pharmacy",
+    "wilaya": "Mila",
+    "lat": 36.4510,
+    "lng": 6.2680,
+    "address": "ميلة"
+  },
+  {
+    "osmId": "static/mila-firestation-1",
+    "name": "ثكنة الحماية المدنية ميلة",
+    "type": "firestation",
+    "wilaya": "Mila",
+    "lat": 36.4490,
+    "lng": 6.2650,
+    "address": "ميلة"
+  },
+  {
+    "osmId": "static/jijel-hospital-1",
+    "name": "مستشفى جيجل",
+    "type": "hospital",
+    "wilaya": "Jijel",
+    "lat": 36.8200,
+    "lng": 5.7667,
+    "address": "جيجل"
+  },
+  {
+    "osmId": "static/jijel-pharmacy-1",
+    "name": "صيدلية جيجل",
+    "type": "pharmacy",
+    "wilaya": "Jijel",
+    "lat": 36.8210,
+    "lng": 5.7680,
+    "address": "جيجل"
+  },
+  {
+    "osmId": "static/jijel-firestation-1",
+    "name": "ثكنة الحماية المدنية جيجل",
+    "type": "firestation",
+    "wilaya": "Jijel",
+    "lat": 36.8190,
+    "lng": 5.7650,
+    "address": "جيجل"
+  },
+  {
+    "osmId": "static/bordj-bou-arreridj-hospital-1",
+    "name": "مستشفى برج بوعريريج",
+    "type": "hospital",
+    "wilaya": "Bordj Bou Arreridj",
+    "lat": 36.0731,
+    "lng": 4.7631,
+    "address": "برج بوعريريج"
+  },
+  {
+    "osmId": "static/bordj-bou-arreridj-pharmacy-1",
+    "name": "صيدلية برج بوعريريج",
+    "type": "pharmacy",
+    "wilaya": "Bordj Bou Arreridj",
+    "lat": 36.0740,
+    "lng": 4.7645,
+    "address": "برج بوعريريج"
+  },
+  {
+    "osmId": "static/bordj-bou-arreridj-firestation-1",
+    "name": "ثكنة الحماية المدنية برج بوعريريج",
+    "type": "firestation",
+    "wilaya": "Bordj Bou Arreridj",
+    "lat": 36.0720,
+    "lng": 4.7615,
+    "address": "برج بوعريريج"
+  },
+  {
+    "osmId": "static/msila-hospital-1",
+    "name": "مستشفى المسيلة",
+    "type": "hospital",
+    "wilaya": "Msila",
+    "lat": 35.7050,
+    "lng": 4.5444,
+    "address": "المسيلة"
+  },
+  {
+    "osmId": "static/msila-pharmacy-1",
+    "name": "صيدلية المسيلة",
+    "type": "pharmacy",
+    "wilaya": "Msila",
+    "lat": 35.7060,
+    "lng": 4.5460,
+    "address": "المسيلة"
+  },
+  {
+    "osmId": "static/msila-firestation-1",
+    "name": "ثكنة الحماية المدنية المسيلة",
+    "type": "firestation",
+    "wilaya": "Msila",
+    "lat": 35.7040,
+    "lng": 4.5430,
+    "address": "المسيلة"
+  }
+]

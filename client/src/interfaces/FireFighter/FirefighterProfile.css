@@ -1,0 +1,71 @@
+/* FirefighterProfile.css - Full Width Red Theme */
+*, *::before, *::after { box-sizing: border-box; }
+
+.fp-page { display: flex; flex-direction: column; min-height: 100vh; background: #f8fafc; font-family: 'Segoe UI', sans-serif; width: 100%; max-width: none; margin: 0; padding-bottom: 80px; }
+
+.fp-toast { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); padding: 12px 28px; border-radius: 50px; font-size: 14px; font-weight: 600; z-index: 1000; white-space: nowrap; box-shadow: 0 4px 16px rgba(0,0,0,0.12); animation: slideDown 0.3s ease; }
+.fp-toast.success { background: #dcfce7; color: #16a34a; border: 1px solid #86efac; }
+.fp-toast.error   { background: #fee2e2; color: #dc2626; border: 1px solid #fca5a5; }
+@keyframes slideDown { from { opacity: 0; transform: translate(-50%, -16px); } to { opacity: 1; transform: translate(-50%, 0); } }
+
+.fp-hero { background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); padding: 52px 48px; display: flex; align-items: center; gap: 36px; width: 100%; position: relative; }
+.fp-back-btn { position: absolute; top: 20px; left: 48px; background: rgba(255,255,255,0.2); border: none; border-radius: 50px; padding: 8px 16px; color: white; cursor: pointer; font-size: 14px; font-weight: 600; transition: all 0.2s; }
+.fp-back-btn:hover { background: rgba(255,255,255,0.3); }
+.fp-avatar { width: 110px; height: 110px; background: rgba(255,255,255,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 56px; border: 3px solid rgba(255,255,255,0.4); flex-shrink: 0; margin-top: 8px; }
+.fp-hero-name  { font-size: 30px; font-weight: 800; color: white; margin-bottom: 6px; }
+.fp-hero-badge { color: rgba(255,255,255,0.82); font-size: 15px; font-weight: 500; }
+
+.fp-main { width: 100%; max-width: 900px; margin: 0 auto; padding: 36px 48px; }
+
+.fp-info-card { background: white; border-radius: 20px; padding: 0; margin-bottom: 24px; border: 1.5px solid #e2e8f0; overflow: hidden; }
+.fp-info-row { display: flex; align-items: center; gap: 20px; padding: 22px 28px; border-bottom: 1px solid #f1f5f9; transition: background 0.15s; }
+.fp-info-row:hover { background: #f8fafc; }
+.fp-info-row:last-child { border-bottom: none; }
+.fp-info-icon { width: 48px; height: 48px; border-radius: 12px; background: #fee2e2; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+.fp-info-text { display: flex; flex-direction: column; gap: 2px; }
+.fp-info-label { font-size: 11px; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.fp-info-val { font-size: 15px; font-weight: 600; color: #1f2937; }
+
+.fp-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.fp-btn { flex: 1; font-size: 14px; font-weight: 600; padding: 13px; border-radius: 14px; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 7px; transition: all 0.12s; }
+.fp-btn.edit   { background: #ef4444; color: white; box-shadow: 0 4px 14px rgba(239,68,68,0.28); }
+.fp-btn.edit:hover { box-shadow: 0 6px 18px rgba(239,68,68,0.38); }
+.fp-btn.delete { background: #fff1f2; color: #e11d48; }
+.fp-btn.delete:hover { background: #ffe4e6; }
+.fp-btn.delete:disabled { opacity: 0.6; cursor: not-allowed; }
+.fp-btn.save   { flex: 1; background: #ef4444; color: white; box-shadow: 0 4px 14px rgba(239,68,68,0.28); }
+.fp-btn.cancel { flex: none; padding: 13px 20px; background: #f3f4f6; color: #6b7280; }
+.fp-btn.cancel:hover { background: #e5e7eb; }
+.fp-btn.save:disabled { opacity: 0.65; cursor: not-allowed; }
+
+.fp-edit-card { background: white; border-radius: 20px; padding: 32px; margin-bottom: 24px; border: 1.5px solid #e2e8f0; }
+.fp-edit-title { font-size: 18px; font-weight: 700; color: #1f2937; margin: 0 0 24px; padding-bottom: 14px; border-bottom: 1px solid #f1f5f9; }
+.fp-form-group { margin-bottom: 16px; }
+.fp-form-group label { display: block; font-size: 12px; font-weight: 700; color: #64748b; margin-bottom: 8px; text-transform: uppercase; }
+.fp-form-group input, .fp-form-group select { width: 100%; font-size: 14px; color: #1f2937; background: #f9fafb; border: 1.5px solid #e5e7eb; border-radius: 10px; padding: 11px 15px; outline: none; transition: all 0.15s; font-family: 'Segoe UI', sans-serif; }
+.fp-form-group input:focus, .fp-form-group select:focus { border-color: #ef4444; box-shadow: 0 0 0 3px rgba(239,68,68,0.12); background: white; }
+.fp-edit-actions { display: flex; gap: 10px; margin-top: 18px; }
+
+.fp-error-box { background: white; border-radius: 16px; padding: 48px; text-align: center; border: 1.5px solid #e2e8f0; }
+.fp-error-box span { font-size: 40px; display: block; margin-bottom: 10px; }
+.fp-error-box p { color: #6b7280; margin-bottom: 20px; }
+.fp-error-box button { background: #ef4444; color: white; border: none; border-radius: 12px; padding: 11px 24px; cursor: pointer; font-weight: 600; }
+
+.fp-skeleton-hero { height: 200px; background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%); background-size: 200% 100%; animation: shimmer 1.4s infinite; width: 100%; }
+.fp-skeleton-card { height: 300px; background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%); background-size: 200% 100%; border-radius: 20px; animation: shimmer 1.4s infinite; }
+@keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+.fp-bottom-nav { display: flex; justify-content: center; gap: 8px; padding: 10px 24px; background: white; border-top: 1px solid #e2e8f0; position: fixed; bottom: 0; left: 0; width: 100%; z-index: 200; }
+.fp-nav-btn { background: none; border: none; padding: 8px 28px; cursor: pointer; border-radius: 12px; transition: all 0.2s; color: #94a3b8; display: flex; flex-direction: column; align-items: center; gap: 3px; font-size: 12px; font-weight: 600; }
+.fp-nav-btn span:first-child { font-size: 22px; }
+.fp-nav-btn:hover { background: #fff1f1; color: #ef4444; }
+.fp-nav-active { background: #fff1f1 !important; color: #ef4444 !important; }
+
+@media (max-width: 900px) { .fp-hero { padding: 40px 24px; } .fp-back-btn { left: 24px; } .fp-main { padding: 24px; } }
+@media (max-width: 600px) {
+  .fp-hero { padding: 52px 16px 28px; flex-direction: column; text-align: center; }
+  .fp-back-btn { left: 16px; top: 16px; } .fp-avatar { width: 86px; height: 86px; font-size: 44px; }
+  .fp-hero-name { font-size: 22px; } .fp-main { padding: 20px 16px; }
+  .fp-actions { flex-direction: column; } .fp-edit-actions { flex-direction: column; }
+  .fp-nav-btn { padding: 8px 12px; }
+}

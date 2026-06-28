@@ -1,0 +1,191 @@
+/* 📁 src/Email/GetSingleEmail.css */
+/* Same design system as AddDoctor/Login/GetSingleDoctor */
+
+.email-detail-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 20px;
+}
+
+.email-card {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+.email-header {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.email-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    color: white;
+    font-size: 24px;
+}
+
+.email-subject {
+    font-size: 18px;
+    color: #1e293b;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.email-meta {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.email-info {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 14px;
+    color: #334155;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    color: #64748b;
+    font-weight: 500;
+}
+
+.info-value {
+    color: #1e293b;
+    font-weight: 600;
+    text-align: right;
+    max-width: 60%;
+    word-wrap: break-word;
+}
+
+/* Status Badge */
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-badge.sent {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.status-badge.failed {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+/* Email Content Preview */
+.email-content {
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px 0;
+    text-align: left;
+    font-size: 14px;
+    color: #334155;
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #e2e8f0;
+}
+
+.email-content html {
+    white-space: pre-wrap;
+}
+
+/* Loading & Error States */
+.loading-spinner {
+    text-align: center;
+    padding: 40px;
+    color: #64748b;
+}
+
+.error-message {
+    padding: 12px;
+    background: #fee2e2;
+    color: #dc2626;
+    border-radius: 25px;
+    margin: 20px 0;
+    font-size: 14px;
+    border: 1px solid #fca5a5;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.action-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.action-btn.primary {
+    background: #3b82f6;
+    color: white;
+}
+
+.action-btn.primary:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+}
+
+.action-btn.secondary {
+    background: #f1f5f9;
+    color: #334155;
+}
+
+.action-btn.secondary:hover {
+    background: #e2e8f0;
+}
+
+.action-btn:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .email-card { padding: 20px; }
+    .email-subject { font-size: 16px; }
+    .info-row { font-size: 13px; padding: 10px 0; }
+    .info-value { max-width: 50%; }
+    .action-buttons { flex-direction: column; }
+}

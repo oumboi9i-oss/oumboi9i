@@ -1,0 +1,101 @@
+/* 📁 src/App.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* الخلفية الرئيسية */
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* خلفية هادية واحترافية */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* المحتوى الرئيسي */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* بطاقة Logout صغيرة */
+.simple-logout {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.user-badge {
+  background: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #334155;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logout-small-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.logout-small-btn:hover {
+  background: #dc2626;
+}
+
+/* تنسيق الأقسام (Sections) */
+.section-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border-top: 5px solid transparent; /* للتلوين */
+  transition: transform 0.3s;
+}
+
+.section-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 24px;
+  color: #1e293b;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+/* ألوان الحدود لكل قسم */
+.doctors-section { border-top-color: #3b82f6; }       /* Blue */
+.nurses-section { border-top-color: #ec4899; }        /* Pink */
+.firefighters-section { border-top-color: #ef4444; }  /* Red */
+.gardes-section { border-top-color: #8b5cf6; }        /* Purple */
+.messages-section { border-top-color: #22c55e; }      /* Green */
+.pharmacists-section { border-top-color: #16a34a; }   /* Dark Green */
+.transactions-section { border-top-color: #f59e0b; }  /* Orange */
+.email-section { border-top-color: #6366f1; }         /* Indigo */
+
+/* Responsive للهاتف */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 20px 10px;
+  }
+  .section-card {
+    padding: 20px;
+  }
+  .section-title {
+    font-size: 20px;
+  }
+}

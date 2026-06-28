@@ -1,0 +1,514 @@
+/* ManageAccount.css - Matching ManageTransactions Style (Navy + Red) */
+
+.manage-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 30px 20px;
+}
+
+.manage-card {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo-text {
+    font-size: 28px;
+    color: #1e3a8a; /* Navy Blue */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.logo-text span {
+    color: #ef4444; /* Red Accent */
+}
+
+.tagline {
+    color: #64748b;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+/* Status Messages */
+.status-message {
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    animation: slideIn 0.3s ease;
+}
+
+.status-message.success {
+    background: #dcfce7;
+    color: #16a34a;
+    border: 1px solid #86efac;
+}
+
+.status-message.error {
+    background: #fee2e2;
+    color: #dc2626;
+    border: 1px solid #fca5a5;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 25px;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #1e3a8a;
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+.search-btn {
+    padding: 12px 25px;
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.search-btn:hover:not(:disabled) {
+    background: #1e40af;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+}
+
+.search-btn:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+}
+
+/* Table Wrapper */
+.table-wrapper {
+    margin: 20px 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.loading, .no-data {
+    padding: 40px;
+    background: #f8fafc;
+    border: 2px dashed #e2e8f0;
+    border-radius: 15px;
+    color: #64748b;
+    font-size: 16px;
+}
+
+/* Accounts Table */
+.accounts-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-size: 14px;
+}
+
+.accounts-table thead {
+    background: #1e3a8a;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.accounts-table th {
+    padding: 15px 10px;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.accounts-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.accounts-table tbody tr {
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.accounts-table tbody tr:hover {
+    background: #f1f5f9;
+    transform: scale(1.01);
+}
+
+.accounts-table tbody tr.selected {
+    background: #dbeafe;
+    border-left: 4px solid #1e3a8a;
+}
+
+/* Email Cell */
+.email-cell {
+    display: block;
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #475569;
+}
+
+/* Text Utilities */
+.text-muted {
+    color: #64748b;
+    font-size: 11px;
+}
+
+/* Role Badge */
+.role-badge {
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* Status Badge */
+.status-badge {
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.status-badge.active {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.status-badge.inactive {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+/* Action Buttons */
+.actions-cell {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.action-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.action-btn.edit {
+    background: #3b82f6;
+    color: white;
+}
+.action-btn.edit:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+}
+
+.action-btn.delete {
+    background: #ef4444;
+    color: white;
+}
+.action-btn.delete:hover {
+    background: #dc2626;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(239, 68, 68, 0.3);
+}
+
+/* Divider */
+.divider {
+    margin: 25px 0 15px;
+    border-bottom: 1px solid #e2e8f0;
+    position: relative;
+}
+
+.divider span {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 0 15px;
+    color: #1e3a8a;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Edit Form */
+.edit-form {
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 15px;
+    margin: 25px 0;
+    text-align: left;
+    border: 2px solid #e2e8f0;
+    animation: slideIn 0.3s ease;
+}
+
+.edit-form h3 {
+    color: #1e3a8a;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 25px;
+    font-size: 14px;
+    transition: all 0.3s;
+    background: white;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #1e3a8a;
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+.checkbox-group {
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: #334155;
+    font-size: 14px;
+}
+
+.checkbox-label input {
+    width: 18px;
+    height: 18px;
+    accent-color: #1e3a8a;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.cancel-btn, .main-btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.cancel-btn {
+    background: #64748b;
+    color: white;
+}
+.cancel-btn:hover {
+    background: #475569;
+    transform: translateY(-2px);
+}
+
+.main-btn {
+    background: #1e3a8a;
+    color: white;
+}
+.main-btn:hover:not(:disabled) {
+    background: #1e40af;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+}
+.main-btn:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Warning Box */
+.warning-box {
+    background: #fef3c7;
+    border: 1px solid #fcd34d;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.warning-box p {
+    margin: 5px 0;
+    color: #92400e;
+    font-size: 13px;
+}
+
+/* Refresh Button */
+.refresh-btn {
+    width: 100%;
+    padding: 12px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s;
+}
+
+.refresh-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* Modal Dialog */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.modal-dialog {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    max-width: 420px;
+    width: 90%;
+    text-align: left;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: modalSlide 0.3s ease;
+}
+
+@keyframes modalSlide {
+    from { opacity: 0; transform: translateY(-30px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.modal-dialog h4 { margin: 0 0 15px 0; color: #1e3a8a; font-size: 18px; }
+.modal-dialog p { margin: 0 0 20px 0; color: #475569; font-size: 14px; line-height: 1.5; }
+
+.modal-details {
+    background: #f8fafc;
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.modal-details strong { color: #1e3a8a; }
+.modal-details div { margin: 4px 0; }
+
+.modal-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.modal-btn {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.modal-btn.cancel { background: #e2e8f0; color: #475569; }
+.modal-btn.cancel:hover { background: #cbd5e1; }
+
+.modal-btn.confirm { background: #ef4444; color: white; }
+.modal-btn.confirm:hover { background: #dc2626; transform: translateY(-1px); }
+
+.modal-btn.confirm.edit { background: #3b82f6; }
+.modal-btn.confirm.edit:hover { background: #2563eb; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .manage-card { padding: 20px; }
+    .search-box { flex-direction: column; }
+    .search-input, .search-btn { width: 100%; }
+    .form-grid { grid-template-columns: 1fr; }
+    .form-actions, .modal-actions { flex-direction: column; }
+    .cancel-btn, .main-btn, .modal-btn { width: 100%; }
+    .accounts-table th:nth-child(2), .accounts-table td:nth-child(2),
+    .accounts-table th:nth-child(4), .accounts-table td:nth-child(4) { display: none; }
+    .email-cell { max-width: 120px; }
+}
+
+@media (max-width: 480px) {
+    .accounts-table th:nth-child(3), .accounts-table td:nth-child(3) { display: none; }
+}

@@ -1,0 +1,71 @@
+/* PharmacistProfile.css - Full Width Green Theme */
+*, *::before, *::after { box-sizing: border-box; }
+
+.pp-page { display: flex; flex-direction: column; min-height: 100vh; background: #f8fafc; font-family: 'Segoe UI', sans-serif; width: 100%; max-width: none; margin: 0; padding-bottom: 80px; }
+
+.pp-toast { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); padding: 12px 28px; border-radius: 50px; font-size: 14px; font-weight: 600; z-index: 1000; white-space: nowrap; box-shadow: 0 4px 16px rgba(0,0,0,0.12); animation: slideDown 0.3s ease; }
+.pp-toast.success { background: #dcfce7; color: #16a34a; border: 1px solid #86efac; }
+.pp-toast.error   { background: #fee2e2; color: #dc2626; border: 1px solid #fca5a5; }
+@keyframes slideDown { from { opacity: 0; transform: translate(-50%, -16px); } to { opacity: 1; transform: translate(-50%, 0); } }
+
+.pp-hero { background: linear-gradient(135deg, #059669 0%, #10b981 100%); padding: 52px 48px; display: flex; align-items: center; gap: 36px; width: 100%; position: relative; }
+.pp-back-btn { position: absolute; top: 20px; left: 48px; background: rgba(255,255,255,0.2); border: none; border-radius: 50px; padding: 8px 16px; color: white; cursor: pointer; font-size: 14px; font-weight: 600; transition: all 0.2s; }
+.pp-back-btn:hover { background: rgba(255,255,255,0.3); }
+.pp-avatar { width: 110px; height: 110px; background: rgba(255,255,255,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 56px; border: 3px solid rgba(255,255,255,0.4); flex-shrink: 0; margin-top: 8px; }
+.pp-hero-name  { font-size: 30px; font-weight: 800; color: white; margin-bottom: 6px; }
+.pp-hero-badge { color: rgba(255,255,255,0.82); font-size: 15px; font-weight: 500; }
+
+.pp-main { width: 100%; max-width: 900px; margin: 0 auto; padding: 36px 48px; }
+
+.pp-info-card { background: white; border-radius: 20px; padding: 0; margin-bottom: 24px; border: 1.5px solid #e2e8f0; overflow: hidden; }
+.pp-info-row { display: flex; align-items: center; gap: 20px; padding: 22px 28px; border-bottom: 1px solid #f1f5f9; transition: background 0.15s; }
+.pp-info-row:hover { background: #f8fafc; }
+.pp-info-row:last-child { border-bottom: none; }
+.pp-info-icon { width: 48px; height: 48px; border-radius: 12px; background: #d1fae5; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+.pp-info-text { display: flex; flex-direction: column; gap: 2px; }
+.pp-info-label { font-size: 11px; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.pp-info-val { font-size: 15px; font-weight: 600; color: #1f2937; }
+
+.pp-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.pp-btn { flex: 1; font-size: 14px; font-weight: 600; padding: 13px; border-radius: 14px; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 7px; transition: all 0.12s; }
+.pp-btn.edit   { background: #059669; color: white; box-shadow: 0 4px 14px rgba(5,150,105,0.28); }
+.pp-btn.edit:hover { box-shadow: 0 6px 18px rgba(5,150,105,0.38); }
+.pp-btn.delete { background: #fff1f2; color: #e11d48; }
+.pp-btn.delete:hover { background: #ffe4e6; }
+.pp-btn.delete:disabled { opacity: 0.6; cursor: not-allowed; }
+.pp-btn.save   { flex: 1; background: #059669; color: white; box-shadow: 0 4px 14px rgba(5,150,105,0.28); }
+.pp-btn.cancel { flex: none; padding: 13px 20px; background: #f3f4f6; color: #6b7280; }
+.pp-btn.cancel:hover { background: #e5e7eb; }
+.pp-btn.save:disabled { opacity: 0.65; cursor: not-allowed; }
+
+.pp-edit-card { background: white; border-radius: 20px; padding: 32px; margin-bottom: 24px; border: 1.5px solid #e2e8f0; }
+.pp-edit-title { font-size: 18px; font-weight: 700; color: #1f2937; margin: 0 0 24px; padding-bottom: 14px; border-bottom: 1px solid #f1f5f9; }
+.pp-form-group { margin-bottom: 16px; }
+.pp-form-group label { display: block; font-size: 12px; font-weight: 700; color: #64748b; margin-bottom: 8px; text-transform: uppercase; }
+.pp-form-group input { width: 100%; font-size: 14px; color: #1f2937; background: #f9fafb; border: 1.5px solid #e5e7eb; border-radius: 10px; padding: 11px 15px; outline: none; transition: all 0.15s; font-family: 'Segoe UI', sans-serif; }
+.pp-form-group input:focus { border-color: #059669; box-shadow: 0 0 0 3px rgba(5,150,105,0.12); background: white; }
+.pp-edit-actions { display: flex; gap: 10px; margin-top: 18px; }
+
+.pp-error-box { background: white; border-radius: 16px; padding: 48px; text-align: center; border: 1.5px solid #e2e8f0; }
+.pp-error-box span { font-size: 40px; display: block; margin-bottom: 10px; }
+.pp-error-box p { color: #6b7280; margin-bottom: 20px; }
+.pp-error-box button { background: #059669; color: white; border: none; border-radius: 12px; padding: 11px 24px; cursor: pointer; font-weight: 600; }
+
+.pp-skeleton-hero { height: 200px; background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%); background-size: 200% 100%; animation: shimmer 1.4s infinite; width: 100%; }
+.pp-skeleton-card { height: 300px; background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%); background-size: 200% 100%; border-radius: 20px; animation: shimmer 1.4s infinite; }
+@keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+.pp-bottom-nav { display: flex; justify-content: center; gap: 8px; padding: 10px 24px; background: white; border-top: 1px solid #e2e8f0; position: fixed; bottom: 0; left: 0; width: 100%; z-index: 200; }
+.pp-nav-btn { background: none; border: none; padding: 8px 28px; cursor: pointer; border-radius: 12px; transition: all 0.2s; color: #94a3b8; display: flex; flex-direction: column; align-items: center; gap: 3px; font-size: 12px; font-weight: 600; }
+.pp-nav-btn span:first-child { font-size: 22px; }
+.pp-nav-btn:hover { background: #f0fdf4; color: #059669; }
+.pp-nav-active { background: #f0fdf4 !important; color: #059669 !important; }
+
+@media (max-width: 900px) { .pp-hero { padding: 40px 24px; } .pp-back-btn { left: 24px; } .pp-main { padding: 24px; } }
+@media (max-width: 600px) {
+  .pp-hero { padding: 52px 16px 28px; flex-direction: column; text-align: center; }
+  .pp-back-btn { left: 16px; top: 16px; } .pp-avatar { width: 86px; height: 86px; font-size: 44px; }
+  .pp-hero-name { font-size: 22px; } .pp-main { padding: 20px 16px; }
+  .pp-actions { flex-direction: column; } .pp-edit-actions { flex-direction: column; }
+  .pp-nav-btn { padding: 8px 12px; }
+}

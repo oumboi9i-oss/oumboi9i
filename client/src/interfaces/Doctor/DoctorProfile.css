@@ -1,0 +1,388 @@
+/* DoctorProfile.css - Without Bottom Nav */
+
+* { box-sizing: border-box; }
+
+.dp-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--color-surface, #f8fafc);
+  font-family: 'Segoe UI', sans-serif;
+  width: 100%;
+}
+
+/* ══════════════════════════════════════
+   TOAST
+══════════════════════════════════════ */
+.dp-toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 1000;
+  animation: dp-slideDown 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.dp-toastSuccess { background: #dcfce7; color: #16a34a; border: 1px solid #86efac; }
+.dp-toastError   { background: #fee2e2; color: #dc2626; border: 1px solid #fca5a5; }
+
+@keyframes dp-slideDown {
+  from { opacity: 0; transform: translate(-50%, -16px); }
+  to   { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* ══════════════════════════════════════
+   HERO SECTION
+══════════════════════════════════════ */
+.dp-hero {
+  background: linear-gradient(135deg, #3b82f6 0%, var(--color-accent, #2563eb) 100%);
+  padding: 52px 48px;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  width: 100%;
+  position: relative;
+}
+
+.dp-backBtn {
+  position: absolute;
+  top: 20px;
+  left: 48px;
+  background: rgba(255,255,255,0.2);
+  border: none;
+  border-radius: 50px;
+  padding: 8px 16px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s;
+  backdrop-filter: blur(8px);
+}
+
+.dp-backBtn:hover { background: rgba(255,255,255,0.3); }
+
+.dp-avatarWrap {
+  position: relative;
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+.dp-avatar {
+  width: 110px;
+  height: 110px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56px;
+  border: 3px solid rgba(255,255,255,0.4);
+}
+
+.dp-statusDot {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.dp-dotGreen { background: #10b981; }
+.dp-dotRed   { background: #ef4444; }
+
+.dp-heroName {
+  color: white;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+}
+
+.dp-heroSpec {
+  color: rgba(255,255,255,0.82);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* ══════════════════════════════════════
+   MAIN CONTENT
+══════════════════════════════════════ */
+.dp-mainContent {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 36px 48px;
+  flex: 1;
+}
+
+/* ══════════════════════════════════════
+   INFO SECTION
+══════════════════════════════════════ */
+.dp-infoSection {
+  background: white;
+  border-radius: 20px;
+  padding: 0;
+  margin-bottom: 24px;
+  border: 1.5px solid var(--color-border, #e2e8f0);
+  overflow: hidden;
+}
+
+.dp-infoRow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 28px;
+  border-bottom: 1px solid #f1f5f9;
+  transition: background 0.15s;
+}
+
+.dp-infoRow:hover { background: var(--color-surface, #f8fafc); }
+.dp-infoRow:last-child { border-bottom: none; }
+
+.dp-infoIcon {
+  font-size: 24px;
+  width: 48px;
+  height: 48px;
+  background: #eff6ff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dp-infoText { flex: 1; min-width: 0; }
+
+.dp-infoLabel {
+  display: block;
+  font-size: 11px;
+  color: #94a3b8;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.dp-infoVal {
+  font-size: 15px;
+  color: var(--color-text, #0f172a);
+  font-weight: 600;
+  word-break: break-word;
+}
+
+/* ══════════════════════════════════════
+   ACTIONS
+══════════════════════════════════════ */
+.dp-actions {
+  display: flex;
+  gap: 14px;
+  padding: 24px 28px;
+  flex-wrap: wrap;
+  border-top: 1px solid #f1f5f9;
+}
+
+.dp-btnEdit {
+  padding: 12px 32px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+  background: #3b82f6;
+  color: white;
+}
+
+.dp-btnEdit:hover {
+  background: var(--color-accent, #2563eb);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(59,130,246,0.3);
+}
+
+.dp-btnDelete {
+  padding: 12px 32px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.dp-btnDelete:hover {
+  background: #fecaca;
+  transform: translateY(-2px);
+}
+
+/* ══════════════════════════════════════
+   EDIT FORM
+══════════════════════════════════════ */
+.dp-editForm {
+  background: white;
+  border-radius: 20px;
+  padding: 32px;
+  margin-bottom: 24px;
+  border: 1.5px solid var(--color-border, #e2e8f0);
+}
+
+.dp-editTitle {
+  color: var(--color-text, #0f172a);
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 28px;
+}
+
+.dp-formGroup { margin-bottom: 18px; }
+
+.dp-formGroup label {
+  color: var(--color-muted, #64748b);
+  font-weight: 700;
+  font-size: 11px;
+  display: block;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dp-formGroup input,
+.dp-formGroup select {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1.5px solid var(--color-border, #e2e8f0);
+  border-radius: 10px;
+  font-size: 14px;
+  color: var(--color-text, #0f172a);
+  background: var(--color-surface, #f8fafc);
+  outline: none;
+  transition: all 0.2s;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.dp-formGroup input:focus,
+.dp-formGroup select:focus {
+  border-color: #3b82f6;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
+}
+
+.dp-editActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.dp-btnSave {
+  padding: 13px 32px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dp-btnSave:hover:not(:disabled) {
+  background: var(--color-accent, #2563eb);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(59,130,246,0.3);
+}
+
+.dp-btnSave:disabled { opacity: 0.55; cursor: not-allowed; }
+
+.dp-btnCancel {
+  padding: 13px 28px;
+  background: #f1f5f9;
+  color: #475569;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dp-btnCancel:hover { background: var(--color-border, #e2e8f0); }
+
+/* ══════════════════════════════════════
+   ERROR & SKELETON
+══════════════════════════════════════ */
+.dp-errorBox {
+  text-align: center;
+  padding: 80px 40px;
+  background: white;
+  border-radius: 20px;
+  border: 1.5px solid var(--color-border, #e2e8f0);
+}
+
+.dp-errorBox span { font-size: 60px; display: block; margin-bottom: 16px; }
+.dp-errorBox p    { color: #dc2626; margin-bottom: 24px; font-size: 16px; }
+
+.dp-btnBack {
+  padding: 13px 32px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.dp-skeletonHeader {
+  height: 200px;
+  background: linear-gradient(90deg, var(--color-border, #e2e8f0) 25%, #f1f5f9 50%, var(--color-border, #e2e8f0) 75%);
+  background-size: 200% 100%;
+  animation: dp-shimmer 1.4s infinite;
+  width: 100%;
+}
+
+.dp-skeletonCard {
+  height: 360px;
+  background: linear-gradient(90deg, var(--color-border, #e2e8f0) 25%, #f1f5f9 50%, var(--color-border, #e2e8f0) 75%);
+  background-size: 200% 100%;
+  border-radius: 20px;
+  animation: dp-shimmer 1.4s infinite;
+  margin: 36px 48px;
+}
+
+@keyframes dp-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media (max-width: 900px) {
+  .dp-hero        { padding: 40px 24px; gap: 24px; }
+  .dp-backBtn     { left: 24px; }
+  .dp-mainContent { padding: 24px 24px; }
+  .dp-skeletonCard { margin: 24px 24px; }
+}
+
+@media (max-width: 600px) {
+  .dp-hero        { padding: 52px 16px 28px; flex-direction: column; text-align: center; }
+  .dp-backBtn     { left: 16px; top: 16px; }
+  .dp-avatar      { width: 86px; height: 86px; font-size: 44px; }
+  .dp-heroName    { font-size: 22px; }
+  .dp-mainContent { padding: 20px 16px; }
+  .dp-infoRow     { padding: 16px 20px; }
+  .dp-actions     { padding: 18px 20px; flex-direction: column; }
+  .dp-editForm    { padding: 20px; }
+  .dp-editActions { flex-direction: column; }
+  .dp-btnEdit, .dp-btnDelete, .dp-btnSave, .dp-btnCancel { width: 100%; text-align: center; }
+  .dp-skeletonCard { margin: 20px 16px; }
+}

@@ -1,0 +1,101 @@
+/* App.css - FINAL COMPLETE FIX */
+*, *::before, *::after {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
+html {
+  width: 100%; height: 100%; overflow-x: hidden;
+}
+
+body {
+  width: 100% !important; min-height: 100vh;
+  margin: 0 !important; padding: 0 !important;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8fafc;
+}
+
+#root {
+  width: 100% !important; min-height: 100vh;
+  margin: 0 !important; padding: 0 !important;
+  display: flex; flex-direction: column;
+}
+
+.App {
+  width: 100%; min-height: 100vh; flex: 1;
+}
+
+/* ══ ALL ROLE WRAPPERS — FULL WIDTH ══ */
+.doctor-interface-wrapper,
+.nurse-interface-wrapper,
+.pharmacist-interface-wrapper,
+.firefighter-interface-wrapper,
+.admin-wrapper {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 100vh;
+  background: #f8fafc;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ══ ADMIN CONTENT ══ */
+.main-content {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 48px;
+}
+
+@media (max-width: 900px) { .main-content { padding: 24px; } }
+@media (max-width: 600px) { .main-content { padding: 16px; } }
+
+.section-card {
+  background: white; border-radius: 18px; padding: 30px;
+  margin-bottom: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border-top: 4px solid transparent;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.section-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
+.section-title { font-size: 22px; color: #1e293b; margin-bottom: 22px; padding-bottom: 14px; border-bottom: 2px solid #f1f5f9; font-weight: 700; }
+
+.doctors-section      { border-top-color: #3b82f6; }
+.nurses-section       { border-top-color: #ec4899; }
+.firefighters-section { border-top-color: #ef4444; }
+.gardes-section       { border-top-color: #8b5cf6; }
+.messages-section     { border-top-color: #22c55e; }
+.pharmacists-section  { border-top-color: #16a34a; }
+.transactions-section { border-top-color: #f59e0b; }
+.email-section        { border-top-color: #6366f1; }
+
+.simple-logout { display: flex; justify-content: flex-end; align-items: center; gap: 15px; margin-bottom: 24px; }
+.user-badge { background: white; padding: 8px 16px; border-radius: 20px; font-weight: 600; color: #334155; box-shadow: 0 2px 8px rgba(0,0,0,0.06); font-size: 14px; }
+.logout-small-btn { background: #ef4444; color: white; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 13px; }
+.logout-small-btn:hover { background: #dc2626; }
+
+/* Role shell layout */
+.role-shell {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background: var(--color-surface);
+  font-family: var(--font-base);
+}
+
+.role-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.role-body {
+  flex: 1;
+  overflow: auto;
+  padding-bottom: 0;
+  min-height: 0;
+}
+

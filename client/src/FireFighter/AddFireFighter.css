@@ -1,0 +1,161 @@
+/* AddFireFighter.css - Matching AddNurse Interface */
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 20px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo-text {
+    font-size: 28px;
+    color: #1e3a8a; /* Navy Blue */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.logo-text span {
+    color: #ef4444; /* Red Accent */
+}
+
+.tagline {
+    color: #64748b;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+/* Form Inputs */
+form input[type="text"],
+form input[type="email"],
+form .form-select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 25px; /* Pill shape */
+    background: #f8fafc;
+    outline: none;
+    text-align: center;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    color: #334155;
+}
+
+form input:focus,
+form .form-select:focus {
+    border-color: #ef4444; /* Red focus ring */
+    background: white;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* Status Messages */
+.status-message {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status-message.success {
+    background: #dcfce7;
+    color: #16a34a;
+    border: 1px solid #86efac;
+}
+
+.status-message.error {
+    background: #fee2e2;
+    color: #dc2626;
+    border: 1px solid #fca5a5;
+}
+
+/* Submit Button */
+.main-btn {
+    width: 100%;
+    padding: 12px;
+    background: #ef4444; /* Red Button */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 16px;
+}
+
+.main-btn:hover {
+    background: #dc2626;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.main-btn:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-dialog {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    max-width: 400px;
+    width: 90%;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.modal-dialog h4 {
+    margin-top: 0;
+    color: #1e3a8a;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.modal-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.modal-btn.cancel {
+    background: #e2e8f0;
+    color: #475569;
+}
+
+.modal-btn.confirm {
+    background: #ef4444;
+    color: white;
+}

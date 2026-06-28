@@ -1,0 +1,116 @@
+/* AddTransaction.css - Exact match to AddNurse/Login interface */
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 20px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo-text {
+    font-size: 28px;
+    color: #1e3a8a;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.logo-text span {
+    color: #8b5cf6; /* Purple accent for Transactions */
+}
+
+.tagline {
+    color: #64748b;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+/* Form Inputs & Selects */
+form input[type="text"],
+form .form-select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 25px; /* Pill shape */
+    background: #f8fafc;
+    outline: none;
+    text-align: center;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    color: #334155;
+}
+
+form input:focus,
+form .form-select:focus {
+    border-color: #8b5cf6;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+/* Status Messages */
+.status-message {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status-message.success {
+    background: #dcfce7;
+    color: #16a34a;
+    border: 1px solid #86efac;
+}
+
+.status-message.error {
+    background: #fee2e2;
+    color: #dc2626;
+    border: 1px solid #fca5a5;
+}
+
+/* Submit Button */
+.main-btn {
+    width: 100%;
+    padding: 12px;
+    background: #8b5cf6;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 16px;
+}
+
+.main-btn:hover {
+    background: #7c3aed;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+.main-btn:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .login-card { padding: 20px; }
+    .logo-text { font-size: 24px; }
+    form input[type="text"], form .form-select { padding: 10px; font-size: 13px; }
+}

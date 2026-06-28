@@ -1,0 +1,489 @@
+/* 📁 src/garde/ManageGarde.css */
+
+.manage-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background: #f8fafc; /* خلفية رمادية فاتحة */
+    font-family: 'Segoe UI', sans-serif;
+    padding: 20px;
+    margin: 0;
+}
+
+.manage-card {
+    width: 95%; /* بدل 100% بـ 95% */
+    max-width: 1200px; /* حد أقصى للعرض */
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* قللي الـ padding من 30px لـ 20px */
+    margin: 20px auto; /* وسطي الكارد */
+}
+
+/* العنوان */
+.logo-text {
+    font-size: 24px; /* قللي من 28px */
+    color: #1e293b;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.logo-text span {
+    color: #ef4444; /* أحمر لـ Garde */
+}
+
+.tagline {
+    color: #64748b;
+    margin-bottom: 20px; /* قللي من 30px */
+    font-size: 13px;
+    text-align: center;
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px; /* قللي من 20px */
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 25px;
+    background: #f8fafc;
+    outline: none;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.search-input:focus {
+    border-color: #8b5cf6;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.search-btn {
+    padding: 10px 25px;
+    background: #1e40af;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.search-btn:hover {
+    background: #1e3a8a;
+    transform: translateY(-2px);
+}
+
+.search-btn:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Table Wrapper */
+.table-wrapper {
+    margin: 20px 0;
+    overflow-x: auto;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+}
+
+/* Table */
+.gardes-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.gardes-table thead {
+    background: #f1f5f9;
+    position: sticky;
+    top: 0;
+}
+
+.gardes-table th {
+    padding: 12px 15px; /* قللي من 15px 20px */
+    text-align: left;
+    font-weight: 600;
+    color: #475569;
+    border-bottom: 2px solid #cbd5e1;
+}
+
+.gardes-table td {
+    padding: 12px 15px; /* قللي من 15px 20px */
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: middle;
+}
+
+.gardes-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.gardes-table tbody tr.selected {
+    background: #fef3c7;
+    border-left: 3px solid #f59e0b;
+}
+
+/* Status Badge */
+.status-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Actions Cell */
+.actions-cell {
+    display: flex;
+    gap: 5px; /* قللي من 8px */
+    justify-content: flex-start;
+}
+
+.actions-cell button {
+    padding: 6px 10px; /* قللي من 8px 12px */
+    border: none;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.action-btn.view {
+    background: #e0e7ff;
+    color: #4f46e5;
+}
+
+.action-btn.view:hover {
+    background: #c7d2fe;
+}
+
+.action-btn.edit {
+    background: #3b82f6;
+    color: white;
+}
+
+.action-btn.edit:hover {
+    background: #2563eb;
+}
+
+.action-btn.delete {
+    background: #ef4444;
+    color: white;
+}
+
+.action-btn.delete:hover {
+    background: #dc2626;
+}
+
+/* Divider */
+.divider {
+    margin: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #e2e8f0;
+}
+
+.divider span {
+    background: white;
+    padding: 0 15px;
+    color: #64748b;
+    font-size: 14px;
+    position: relative;
+}
+
+/* Edit Form */
+.edit-form {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.edit-form h3 {
+    margin: 0 0 20px;
+    color: #1e293b;
+    font-size: 18px;
+}
+
+.edit-form input,
+.edit-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.edit-form input:focus,
+.edit-form select:focus {
+    border-color: #8b5cf6;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.form-select {
+    cursor: pointer;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cancel-btn,
+.main-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.cancel-btn {
+    background: #f1f5f9;
+    color: #64748b;
+}
+
+.cancel-btn:hover {
+    background: #e2e8f0;
+}
+
+.main-btn {
+    background: #8b5cf6;
+    color: white;
+}
+
+.main-btn:hover {
+    background: #7c3aed;
+    transform: translateY(-2px);
+}
+
+.main-btn:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Warning Box */
+.warning-box {
+    background: #fef3c7;
+    border: 1px solid #fcd34d;
+    border-radius: 10px;
+    padding: 12px 20px; /* قللي من 15px 25px */
+    margin: 20px 0;
+    text-align: center;
+}
+
+.warning-box p {
+    margin: 5px 0;
+    font-size: 13px;
+    color: #92400e;
+}
+
+/* Refresh Button */
+.refresh-btn {
+    width: 100%;
+    padding: 12px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+.refresh-btn:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+}
+
+/* Loading & No Data */
+.loading,
+.no-data {
+    text-align: center;
+    padding: 40px 20px;
+    color: #64748b;
+    font-size: 16px;
+}
+
+/* Status Message */
+.status-message {
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.status-message.success {
+    background: #dcfce7;
+    color: #16a34a;
+    border: 1px solid #86efac;
+}
+
+.status-message.error {
+    background: #fee2e2;
+    color: #dc2626;
+    border: 1px solid #fca5a5;
+}
+
+/* Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-dialog {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal-dialog h4 {
+    margin: 0 0 15px;
+    color: #1e293b;
+    font-size: 18px;
+}
+
+.modal-dialog p {
+    margin: 0 0 20px;
+    color: #64748b;
+}
+
+.modal-details {
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.modal-details div {
+    padding: 8px 0;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 14px;
+}
+
+.modal-details div:last-child {
+    border-bottom: none;
+}
+
+.modal-details strong {
+    color: #475569;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.modal-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.modal-btn.cancel {
+    background: #f1f5f9;
+    color: #64748b;
+}
+
+.modal-btn.cancel:hover {
+    background: #e2e8f0;
+}
+
+.modal-btn.confirm {
+    background: #ef4444;
+    color: white;
+}
+
+.modal-btn.confirm.edit {
+    background: #3b82f6;
+}
+
+.modal-btn.confirm:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .manage-card {
+        width: 98%;
+        padding: 15px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+
+    .gardes-table {
+        font-size: 12px;
+    }
+
+    .gardes-table th,
+    .gardes-table td {
+        padding: 8px 10px;
+    }
+
+    .actions-cell {
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .actions-cell button {
+        padding: 5px 8px;
+        font-size: 11px;
+    }
+
+    .form-actions,
+    .modal-actions {
+        flex-direction: column;
+    }
+}

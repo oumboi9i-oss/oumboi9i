@@ -1,0 +1,212 @@
+/* client/src/interfaces/Manager/UserProfileModal.css */
+
+.upm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.upm-modal {
+  background: #fff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 720px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.upm-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-radius: 16px 16px 0 0;
+}
+
+.upm-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.upm-close {
+  background: none;
+  border: none;
+  font-size: 22px;
+  line-height: 1;
+  color: #64748b;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.upm-close:hover {
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.upm-panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 24px;
+}
+
+@media (max-width: 600px) {
+  .upm-panels {
+    grid-template-columns: 1fr;
+  }
+}
+
+.upm-panel {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.upm-panel-title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #6366f1;
+  margin-bottom: 12px;
+}
+
+.upm-field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 12px;
+}
+
+.upm-field:last-child {
+  margin-bottom: 0;
+}
+
+.upm-label {
+  font-size: 11px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  font-weight: 600;
+}
+
+.upm-value {
+  font-size: 14px;
+  color: #1e293b;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.upm-loading {
+  font-size: 13px;
+  color: #94a3b8;
+  padding: 8px 0;
+}
+
+.upm-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 24px;
+  border-top: 1px solid #e2e8f0;
+  position: sticky;
+  bottom: 0;
+  background: #fff;
+  border-radius: 0 0 16px 16px;
+}
+
+.upm-btn-approve {
+  background: #16a34a;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.upm-btn-approve:hover {
+  background: #15803d;
+}
+
+.upm-btn-reject {
+  background: #dc2626;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.upm-btn-reject:hover {
+  background: #b91c1c;
+}
+
+/* Status banner — shown instead of Approve/Reject when read-only (history) */
+.upm-status-banner {
+  width: 100%;
+  text-align: center;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.upm-status-approved {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.upm-status-rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.upm-status-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.upm-btn-message {
+  width: 100%;
+  margin-top: 14px;
+  background: #4338ca;
+  color: #fff;
+  border: none;
+  padding: 9px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.upm-btn-message:hover {
+  background: #3730a3;
+}

@@ -1,0 +1,128 @@
+.transaction-detail-page {
+  padding: 20px;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.transaction-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.transaction-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.transaction-icon {
+  font-size: 48px;
+}
+
+.transaction-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.status-badge {
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-badge.completed { background: #dcfce7; color: #16a34a; }
+.status-badge.pending   { background: #fef9c3; color: #ca8a04; }
+.status-badge.failed    { background: #fee2e2; color: #dc2626; }
+
+.transaction-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  background: #f8fafc;
+  border-radius: 10px;
+}
+
+.info-label {
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.info-value {
+  font-size: 14px;
+  color: #1e293b;
+  font-weight: 600;
+  text-align: right;
+  max-width: 60%;
+  word-break: break-all;
+}
+
+.info-value.amount {
+  color: #16a34a;
+  font-size: 16px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.action-btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.action-btn.primary {
+  background: #3b82f6;
+  color: white;
+}
+
+.action-btn.primary:hover { background: #2563eb; }
+
+.action-btn.secondary {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.action-btn.secondary:hover { background: #e2e8f0; }
+
+.placeholder-text {
+  text-align: center;
+  color: #94a3b8;
+  padding: 40px 20px;
+  font-size: 15px;
+}
+
+.error-message {
+  color: #dc2626;
+  text-align: center;
+  padding: 20px;
+}

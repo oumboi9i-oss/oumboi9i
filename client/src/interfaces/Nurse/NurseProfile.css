@@ -1,0 +1,56 @@
+/* NurseProfile.css — Green & White */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.np2-page { font-family: 'Plus Jakarta Sans', sans-serif; min-height: 100vh; background: #F0FDF4; width: 100%; padding-bottom: 80px; }
+.np2-toast { position: fixed; top: 16px; left: 50%; transform: translateX(-50%); padding: 10px 24px; border-radius: 50px; font-size: 13px; font-weight: 700; z-index: 999; white-space: nowrap; animation: np2-slide 0.3s ease; }
+@keyframes np2-slide { from { opacity:0; transform: translate(-50%,-12px);} to { opacity:1; transform: translate(-50%,0);} }
+.np2-toast-success { background: #DCFCE7; color: #15803D; border: 1px solid #86EFAC; }
+.np2-toast-error   { background: #FEE2E2; color: #DC2626; border: 1px solid #FCA5A5; }
+.np2-hero { background: linear-gradient(145deg, #065F46 0%, #10B981 100%); padding: 52px 20px 28px; display: flex; flex-direction: column; align-items: center; gap: 10px; position: relative; }
+.np2-back-btn { position: absolute; top: 16px; left: 16px; background: rgba(255,255,255,0.18); border: none; border-radius: 50px; padding: 7px 14px; color: #fff; font-size: 13px; font-weight: 600; cursor: pointer; transition: background 0.2s; font-family: 'Plus Jakarta Sans', sans-serif; }
+.np2-back-btn:hover { background: rgba(255,255,255,0.28); }
+.np2-hero-avatar { width: 90px; height: 90px; background: rgba(255,255,255,0.15); border-radius: 50%; border: 3px solid rgba(255,255,255,0.35); display: flex; align-items: center; justify-content: center; font-size: 44px; margin-bottom: 4px; }
+.np2-hero-name { font-size: 22px; font-weight: 800; color: #fff; text-align: center; }
+.np2-hero-spec { font-size: 14px; color: rgba(255,255,255,0.8); font-weight: 500; }
+.np2-hero-meta { font-size: 13px; color: rgba(255,255,255,0.65); }
+.np2-main { padding: 20px; max-width: 500px; margin: 0 auto; }
+.np2-info-card { background: #fff; border: 1.5px solid #D1FAE5; border-radius: 18px; overflow: hidden; margin-bottom: 16px; }
+.np2-info-row { display: flex; align-items: center; gap: 14px; padding: 16px 18px; border-bottom: 1px solid #F0FDF4; transition: background 0.15s; }
+.np2-info-row:hover { background: #F8FAFC; }
+.np2-info-row:last-child { border-bottom: none; }
+.np2-info-icon-wrap { width: 42px; height: 42px; background: #DCFCE7; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+.np2-info-text { display: flex; flex-direction: column; gap: 2px; }
+.np2-info-label { font-size: 11px; font-weight: 700; color: #94A3B8; text-transform: uppercase; letter-spacing: 0.5px; }
+.np2-info-val   { font-size: 14px; font-weight: 600; color: #0F172A; }
+.np2-actions { display: flex; gap: 10px; }
+.np2-btn { flex: 1; padding: 14px; border: none; border-radius: 14px; font-size: 14px; font-weight: 700; font-family: 'Plus Jakarta Sans', sans-serif; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s; }
+.np2-btn:active { transform: scale(0.97); }
+.np2-btn-edit   { background: #10B981; color: #fff; box-shadow: 0 4px 14px rgba(16,185,129,0.28); }
+.np2-btn-edit:hover { box-shadow: 0 6px 18px rgba(16,185,129,0.38); }
+.np2-btn-delete { background: #FFF1F2; color: #E11D48; flex: 0 0 auto; padding: 14px 20px; }
+.np2-btn-delete:hover { background: #FFE4E6; }
+.np2-btn-delete:disabled { opacity: 0.6; cursor: not-allowed; }
+.np2-edit-card { background: #fff; border: 1.5px solid #D1FAE5; border-radius: 18px; padding: 24px; margin-bottom: 16px; }
+.np2-edit-title { font-size: 16px; font-weight: 800; color: #0F172A; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid #F0FDF4; }
+.np2-form-group { margin-bottom: 14px; }
+.np2-form-group label { display: block; font-size: 11px; font-weight: 700; color: #64748B; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+.np2-form-group input { width: 100%; padding: 12px 14px; border: 1.5px solid #D1FAE5; border-radius: 10px; font-size: 14px; color: #0F172A; font-family: 'Plus Jakarta Sans', sans-serif; background: #F8FAFC; outline: none; transition: all 0.15s; }
+.np2-form-group input:focus { border-color: #10B981; box-shadow: 0 0 0 3px rgba(16,185,129,0.10); background: #fff; }
+.np2-edit-actions { display: flex; gap: 10px; margin-top: 16px; }
+.np2-btn-save   { background: #10B981; color: #fff; box-shadow: 0 4px 14px rgba(16,185,129,0.28); }
+.np2-btn-save:disabled { opacity: 0.65; cursor: not-allowed; }
+.np2-btn-cancel { background: #F1F5F9; color: #64748B; flex: 0 0 auto; padding: 14px 18px; }
+.np2-btn-cancel:hover { background: #E2E8F0; }
+.np2-skeleton-hero { height: 220px; background: linear-gradient(90deg, #D1FAE5 25%, #A7F3D0 50%, #D1FAE5 75%); background-size: 300% 100%; animation: np2-shimmer 1.5s infinite; }
+.np2-skeleton-card { height: 260px; background: linear-gradient(90deg, #F0FDF4 25%, #D1FAE5 50%, #F0FDF4 75%); background-size: 300% 100%; border-radius: 18px; animation: np2-shimmer 1.5s infinite; }
+@keyframes np2-shimmer { 0% { background-position: 200% 0; } 100% { background-position: -100% 0; } }
+.np2-error-box { background: #fff; border: 1.5px solid #D1FAE5; border-radius: 18px; padding: 40px; text-align: center; }
+.np2-error-box span { font-size: 36px; display: block; margin-bottom: 10px; }
+.np2-error-box p { font-size: 14px; color: #64748B; margin-bottom: 16px; }
+.np2-error-box button { background: #10B981; color: #fff; border: none; border-radius: 12px; padding: 10px 22px; cursor: pointer; font-size: 14px; font-weight: 600; font-family: 'Plus Jakarta Sans', sans-serif; }
+.np2-bottom-nav { display: flex; justify-content: space-around; align-items: center; padding: 8px 16px 12px; background: #fff; border-top: 1px solid #D1FAE5; position: fixed; bottom: 0; left: 0; width: 100%; z-index: 200; box-shadow: 0 -4px 20px rgba(0,0,0,0.06); }
+.np2-nav-btn { background: none; border: none; display: flex; flex-direction: column; align-items: center; gap: 3px; font-size: 11px; font-weight: 600; color: #94A3B8; cursor: pointer; padding: 6px 10px; border-radius: 12px; transition: all 0.2s; font-family: 'Plus Jakarta Sans', sans-serif; }
+.np2-nav-btn span:first-child { font-size: 22px; }
+.np2-nav-btn:hover { background: #F0FDF4; color: #10B981; }
+.np2-nav-active { color: #10B981 !important; }
+@media (min-width: 600px) { .np2-page { max-width: 480px; margin: 0 auto; } .np2-bottom-nav { max-width: 480px; left: 50%; transform: translateX(-50%); } }

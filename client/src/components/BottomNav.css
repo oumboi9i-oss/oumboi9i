@@ -1,0 +1,46 @@
+/* client/src/components/BottomNav.css */
+.bn-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--color-card);
+  border-top: 1px solid var(--color-border);
+  padding: 8px 0 10px;
+  z-index: 200;
+  justify-content: space-around;
+}
+
+.bn-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 16px;
+  border-radius: var(--radius-sm);
+  transition: background 0.15s;
+  color: var(--color-subtle);
+  font-size: 11px;
+  font-weight: 600;
+  font-family: var(--font-base);
+}
+
+.bn-tab span:first-child { font-size: 22px; }
+
+.bn-tab:hover { background: #eff6ff; color: var(--color-accent); }
+
+.bn-tab.bn-active { color: var(--color-role); }
+
+.bn-tab.bn-active span:first-child {
+  background: color-mix(in srgb, var(--color-role) 12%, transparent);
+  border-radius: var(--radius-sm);
+  padding: 4px 8px;
+}
+
+@media (max-width: 767px) {
+  .bn-bar { display: flex; }
+}

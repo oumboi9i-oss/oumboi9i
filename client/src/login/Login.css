@@ -1,0 +1,181 @@
+/* Login.css - clean professional design matching Signup.css: borderless card, plain logo */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: #f3f4f6;
+  padding: 48px 20px;
+}
+
+.login-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 36px;
+  width: 100%;
+  max-width: 420px;
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* ✅ اللوغو */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.login-logo {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  color: #6b7280;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* Form Styles */
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-card input {
+  height: 42px;
+  padding: 0 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #111827;
+  background: #fff;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  outline: none;
+  width: 100%;
+}
+
+.login-card input::placeholder { color: #9ca3af; }
+
+.login-card input:focus {
+  border-color: #111827;
+  box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.06);
+}
+
+/* Role Section */
+.role-section { margin: 4px 0; }
+
+.role-title {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.role-checkboxes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.role-checkbox-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s;
+  background: #fff;
+}
+
+.role-checkbox-item:hover { border-color: #9ca3af; background: #f9fafb; }
+
+.role-checkbox-item.selected {
+  border-color: #111827;
+  background: #111827;
+  color: white;
+}
+
+.role-checkbox-item.selected .role-checkbox-label { color: white; }
+
+.role-checkbox-item input[type="checkbox"] {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.role-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #111827;
+}
+
+.role-emoji { font-size: 16px; }
+
+/* Button */
+.main-btn {
+  height: 44px;
+  background: #111827;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+  margin-top: 6px;
+}
+
+.main-btn:hover:not(:disabled) {
+  background: #1f2937;
+}
+
+.main-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Status Message */
+.status-message {
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+}
+.status-message.error   { background: #fef2f2; color: #b91c1c; border: 1px solid #fecaca; }
+.status-message.success { background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0; }
+
+/* Auth Links */
+.auth-links { margin-top: 20px; text-align: center; }
+
+.signup-link {
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.15s;
+}
+.signup-link:hover { color: #111827; }
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-page { padding: 24px 16px; }
+  .login-card { padding: 24px; }
+  .role-checkboxes-grid { grid-template-columns: 1fr; }
+}
