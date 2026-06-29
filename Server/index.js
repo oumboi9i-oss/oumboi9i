@@ -39,7 +39,7 @@ app.use('/api/doctor',        require('./routes/DoctorRoutes/deleteDoctor'));
 app.use('/api/doctor',        require('./routes/DoctorRoutes/updateDoctor'));
 
 app.use('/api/nurse/add',    require('./routes/nurseRoutes/addNurse'));
-app.use('/api/nurse/getAll', require('./routes/nurseRoutes/getnurse'));
+app.use('/api/nurse/getAll', require('./routes/nurseRoutes/getNurse'));
 app.use('/api/nurse',        require('./routes/nurseRoutes/GetSingleNurse'));
 app.use('/api/nurse',        require('./routes/nurseRoutes/updateNurse'));
 app.use('/api/nurse',        require('./routes/nurseRoutes/deleteNurse'));
@@ -60,7 +60,7 @@ app.use('/api/garde/add',    require('./routes/gardeRoutes/addgarde'));
 app.use('/api/garde/getAll', require('./routes/gardeRoutes/getgarde'));
 app.use('/api/garde',        require('./routes/gardeRoutes/GetSingleGarde'));
 app.use('/api/garde',        require('./routes/gardeRoutes/updateGarde'));
-app.use('/api/garde',        require('./routes/gardeRoutes/deleteGarde'));
+app.use('/api/garde',        require('./routes/gardeRoutes/deletegarde'));
 
 // Message routes — ORDER MATTERS (specific before generic)
 app.use('/api/message/add',          require('./routes/messageRoutes/addmessage'));
