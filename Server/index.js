@@ -28,13 +28,19 @@ mongoose.connect(process.env.MONGODB_URI || process.env.MONGO_URI || 'mongodb://
   .catch(err => console.error('❌ MongoDB Error:', err));
 
 // ── Routes ──
-app.use('/api/account/login',    require('./routes/accountRoutes/Login'));
-app.use('/api/account/register', require('./routes/accountRoutes/Register'));
-app.use('/api/account/profile',  require('./routes/accountRoutes/getProfile'));
-app.use('/api/account/pending',     require('./routes/accountRoutes/pendingAccounts'));      // admin/manager: list pending
-app.use('/api/account/setLocation', require('./routes/facilityRoutes/setLocation'));         // PATCH: save user location
-app.use('/api/account',             require('./routes/accountRoutes/approveRejectAccount')); // PUT /:id/approve, DELETE /:id/reject
-app.use('/api/facilities',          require('./routes/facilityRoutes/getFacilities'));       // GET facilities by wilaya+type
+app.use('/api/account/login',          require('./routes/accountRoutes/Login'));
+app.use('/api/account/register',       require('./routes/accountRoutes/Register'));
+app.use('/api/account/admin-register', require('./routes/accountRoutes/adminRegister'));      // admin creates accounts (e.g. managers)
+app.use('/api/account/create',         require('./routes/accountRoutes/createAccount'));
+app.use('/api/account/profile',        require('./routes/accountRoutes/getProfile'));
+app.use('/api/account/pending',        require('./routes/accountRoutes/pendingAccounts'));     // admin/manager: list pending
+app.use('/api/account/setLocation',    require('./routes/facilityRoutes/setLocation'));        // PATCH: save user location
+app.use('/api/account/delete',         require('./routes/accountRoutes/deleteAccount'));       // DELETE /:id
+app.use('/api/account/update',         require('./routes/accountRoutes/updateAccount'));       // PUT /:id
+app.use('/api/account',                require('./routes/accountRoutes/approveRejectAccount')); // PUT /:id/approve, DELETE /:id/reject
+app.use('/api/accounts',               require('./routes/accountRoutes/getAccounts'));         // GET all accounts
+app.use('/api/user/profile',           require('./routes/accountRoutes/getUserProfile'));      // GET /:id
+app.use('/api/facilities',             require('./routes/facilityRoutes/getFacilities'));      // GET facilities by wilaya+type
 
 app.use('/api/doctor/add',    require('./routes/DoctorRoutes/addDoctor'));
 app.use('/api/doctor/getAll', require('./routes/DoctorRoutes/getDoctors'));
@@ -60,6 +66,12 @@ app.use('/api/firefighter',        require('./routes/FireFightersRoutes/GetSingl
 app.use('/api/firefighter',        require('./routes/FireFightersRoutes/updateFireFighter'));
 app.use('/api/firefighter',        require('./routes/FireFightersRoutes/deleteFireFighters'));
 
+app.use('/api/manager/add',    require('./routes/ManagerRoutes/addManager'));
+app.use('/api/manager/getAll', require('./routes/ManagerRoutes/getManager'));
+app.use('/api/manager',        require('./routes/ManagerRoutes/GetSingleManager'));
+app.use('/api/manager',        require('./routes/ManagerRoutes/updateManager'));
+app.use('/api/manager',        require('./routes/ManagerRoutes/deleteManager'));
+
 app.use('/api/garde/add',    require('./routes/gardeRoutes/addgarde'));
 app.use('/api/garde/getAll', require('./routes/gardeRoutes/getgarde'));
 app.use('/api/garde',        require('./routes/gardeRoutes/GetSingleGarde'));
@@ -80,10 +92,14 @@ app.use('/api/transaction',        require('./routes/TransactionRoutes/GetSingle
 app.use('/api/transaction',        require('./routes/TransactionRoutes/updateTransaction'));
 app.use('/api/transaction',        require('./routes/TransactionRoutes/deletetransaction'));
 
-app.use('/api/email/send', require('./routes/emailHandlers/emailMain'));
-app.use('/api/email',      require('./routes/emailHandlers/GetSingleEmail'));
-app.use('/api/email',      require('./routes/emailHandlers/DeleteEmail'));
-app.use('/api/email',      require('./routes/emailHandlers/UpdateEmail'));
+app.use('/api/email/send',   require('./routes/emailHandlers/emailMain'));
+app.use('/api/email/getAll', require('./routes/emailHandlers/GetAllEmails'));   // admin: list all emails
+app.use('/api/email',        require('./routes/emailHandlers/GetSingleEmail'));
+app.use('/api/email',        require('./routes/emailHandlers/DeleteEmail'));
+app.use('/api/email',        require('./routes/emailHandlers/UpdateEmail'));
+
+app.use('/api/demande',      require('./routes/demandeRoutes/demandeRoutes'));        // shift-exchange requests
+app.use('/api/notification', require('./routes/notificationRoutes/notificationRoutes')); // notification bell
 
 const { protect, authorize } = require('./middleware/authMiddleware');
 app.get('/api/admin/dashboard', protect, authorize('admin'), (req, res) => {
