@@ -31,6 +31,8 @@ mongoose.connect(process.env.MONGODB_URI || process.env.MONGO_URI || 'mongodb://
 app.use('/api/account/login',    require('./routes/accountRoutes/Login'));
 app.use('/api/account/register', require('./routes/accountRoutes/Register'));
 app.use('/api/account/profile',  require('./routes/accountRoutes/getProfile'));
+app.use('/api/account/pending',  require('./routes/accountRoutes/pendingAccounts'));      // admin/manager: list pending
+app.use('/api/account',          require('./routes/accountRoutes/approveRejectAccount')); // PUT /:id/approve, DELETE /:id/reject
 
 app.use('/api/doctor/add',    require('./routes/DoctorRoutes/addDoctor'));
 app.use('/api/doctor/getAll', require('./routes/DoctorRoutes/getDoctors'));
